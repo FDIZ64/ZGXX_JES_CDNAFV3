@@ -66,6 +66,11 @@
         "sap.suite.ui.generic.template": {}
       }
     },
+    "controllerExtensions": {
+      "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+        "controllerName": "zzgxxjescdnaf.ext.controller.ListReportExt"
+      }
+    },
     "contentDensities": {
       "compact": true,
       "cozy": true
