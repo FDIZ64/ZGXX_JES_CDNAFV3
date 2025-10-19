@@ -117,6 +117,13 @@
                                         "press": "versipuede",
                                         "requiresSelection": true,
                                         "logicalAction": "Create"
+                                    },
+                                    "uploadFile2": {
+                                        "id": "uploadFile2Button",
+                                        "text": "Upload Excel",
+                                        "press": "uploadFile2",
+                                        "requiresSelection": false,
+                                        "logicalAction": "Create"
                                     }
                                 }
                             },
