@@ -7,11 +7,20 @@ sap.ui.define([
         versipuede: function(oEvent) {
             MessageToast.show("Custom handler invoked.");
         },
-        onColumnPress: function(oEvent) {
-            alert("AAAAAAAAAAAA");
+        onDYNA_IDPress: function(oEvent) {
+            var oControlFuente = oEvent.getSource();
+            var sValorDelCampo;
+            if (oControlFuente.getText) {
+                sValorDelCampo = oControlFuente.getText();
+            } 
+            // Si el control es sap.m.Input, sap.m.DatePicker, etc.
+            else if (oControlFuente.getValue) {
+                sValorDelCampo = oControlFuente.getValue();
+            }
+            alert(sValorDelCampo);
         },
-        onBreakoutColumnPress: function(oEvent) {
-            alert("COLUMNS RESS");
+        onFIELD_IDPress: function(oEvent) {
+            alert("APRETO FIELD_ID");
         }
 
 
