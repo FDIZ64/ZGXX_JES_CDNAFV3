@@ -80,11 +80,21 @@
                 <Property Name="CONV_ROUTINE" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Function Module" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="X_EXCL_COPY" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Exclude copy ind." sap:creatable="false" sap:updatable="false"/>
             </EntityType>
+            <EntityType Name="FILESET" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="FILE_ID"/>
+                </Key>
+                <Property Name="FILE_ID" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FILENAME" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MIMETYPE" Type="Edm.String" Nullable="false" MaxLength="128" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FILESIZE" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
             <EntityContainer Name="Z_GL_JES_F_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
                 <EntitySet Name="ZGXX_JES_CCDAFSet" EntityType="Z_GL_JES_F_SRV.ZGXX_JES_CCDAF" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZGXX_JES_CDNAFSet" EntityType="Z_GL_JES_F_SRV.ZGXX_JES_CDNAF" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZGXX_JES_CDNAHSet" EntityType="Z_GL_JES_F_SRV.ZGXX_JES_CDNAH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
                 <EntitySet Name="ZGXX_JES_SSCRFSet" EntityType="Z_GL_JES_F_SRV.ZGXX_JES_SSCRF" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="FileSet" EntityType="Z_GL_JES_F_SRV.FILESET" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
             </EntityContainer>
             <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
             <atom:link rel="self" href="http://besr4d/sap/opu/odata/sap/Z_GL_JES_F_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>

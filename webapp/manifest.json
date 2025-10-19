@@ -53,7 +53,7 @@
         }
     },
     "sap.ui5": {
-        "flexEnabled": true,
+        "flexEnabled": false,
         "dependencies": {
             "minUI5Version": "1.120.23",
             "libs": {
@@ -115,6 +115,18 @@
                                         "id": "vercositasButton",
                                         "text": "vercositax",
                                         "press": "versipuede",
+                                        "requiresSelection": true,
+                                        "logicalAction": "Create"
+                                    }
+                                }
+                            },
+                            "FileSet": {
+                                "EntitySet": "FileSet",
+                                "Actions": {
+                                    "uploadFile": {
+                                        "id": "uploadFileButton",
+                                        "text": "Upload File",
+                                        "press": "uploadFile",
                                         "requiresSelection": true,
                                         "logicalAction": "Create"
                                     }

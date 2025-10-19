@@ -21,8 +21,9 @@ sap.ui.define([
         },
         onFIELD_IDPress: function(oEvent) {
             alert("APRETO FIELD_ID");
+        },
+        uploadFile: function(oEvent) {
+            MessageToast.show("Custom handler invoked.");
         }
-
-
     }
 });
